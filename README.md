@@ -3,7 +3,7 @@
 Promise queue handler.
 
 ```
-npm install -g
+npm install dehydrater --save
 ```
 
 ## Dehydrater.transaction
@@ -26,11 +26,11 @@ Dehydrater.transaction({n: 1}, next => {
   });
 
 }).then(result => {
-  console.log(result);
+  console.log(result); // {n: 7}
 });
 ```
 
-## Dehydrater.startDehydrate()
+## Dehydrater.startDehydrate(target)
 
 ```js
 const d = Dehydrater.create();
@@ -52,6 +52,10 @@ next(async (obj) => {
 });
 
 promise.then(data => {
-  console.log(data);
+  console.log(data); // {n: 7}
 });
 ```
+
+## LICENSE
+
+MIT
